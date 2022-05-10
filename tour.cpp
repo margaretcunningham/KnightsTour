@@ -14,6 +14,9 @@
 #include <bits/stdc++.h>
 #include <string>
 #define N 8
+#define SINGLE_DIGITS 9
+#define AREA 64
+#define ADD_COLUMN 31
 
 using namespace std;
 
@@ -95,9 +98,9 @@ The following code has been modified by deleting code yielding the original outp
 void print(int a[])
 {
 
-	char notation[9] = {'a','b','c','d','e','f','g','h'};
-	char moveColumn[64];
-	int moveRow[64];
+	const char notation[SINGLE_DIGITS] = {'a','b','c','d','e','f','g','h'};
+	char moveColumn[AREA+10];
+	int moveRow[AREA+10];
 
 	moveColumn[0] = ' ';
 	
@@ -112,15 +115,16 @@ void print(int a[])
 	cout << "+-------------------------------------+" << endl;
 	cout << "| CHESS SCORE SHEET 		      |" << endl;
 	cout << "+-------------------------------------+" << endl;
-	for (int i = 1; i < 34; i++) {
+	for (int i = 1; i < AREA/2 + 1; i++) {
 		cout << "| " << i;
-		if (i > 9) { 
+		if (i > SINGLE_DIGITS) { 
 			cout << " |    " << moveColumn[i] << moveRow[i] << "    |     ";
 	    	}
 	    	else 
 			cout << "  |    " << moveColumn[i] << moveRow[i] << "    |     ";
 
-		cout << "| "  << i + 31 << " |    " << moveColumn[i+31] << moveRow[i+31] << "    |" << endl;
+		cout << "| "  << i + ADD_COLUMN << " |    " << moveColumn[i+ADD_COLUMN] << moveRow[i+ADD_COLUMN] << "    |" << endl;
+		cout << endl;
 	}
 	cout << "+-------------------------------------+" << endl;
 
