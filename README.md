@@ -13,7 +13,7 @@ https://auth.geeksforgeeks.org/user/Uddalak%20Bhaduri/articles/
 C++ program to solve for Knight's tour problem
 
 # Description: 
-This program outputs a solution to a knight's tour using Warnsdorf's algorithm. Edits made to this file for the purpose of outputting the alphanumeric chess notation of a knight's 63 moves on a standard 8x8 board are indicated by the comments in the print function.
+This program outputs a solution to a knight's tour using Warnsdorf's algorithm. Edits made to this file for the purpose of outputting the alphanumeric chess notation of a knight's moves on a standard 8x8 board are indicated by the comments in the print function.
 
 # Algorithm: 
 Warnsdorff's Algorithm
