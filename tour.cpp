@@ -16,7 +16,7 @@
 #define N 8
 #define SINGLE_DIGITS 9
 #define AREA 64
-#define ADD_COLUMN 31
+#define ADD_COLUMN 32
 
 using namespace std;
 
@@ -124,7 +124,6 @@ void print(int a[])
 			cout << "  |    " << moveColumn[i] << moveRow[i] << "    |     ";
 
 		cout << "| "  << i + ADD_COLUMN << " |    " << moveColumn[i+ADD_COLUMN] << moveRow[i+ADD_COLUMN] << "    |" << endl;
-		cout << endl;
 	}
 	cout << "+-------------------------------------+" << endl;
 
