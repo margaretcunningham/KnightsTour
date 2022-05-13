@@ -1,0 +1,885 @@
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.board {
+    background-color: rgb(189, 189, 189);
+}
+.menu-block {
+    height: 200px;
+    width: 290px;
+    border-style: solid;
+    background-color: rgb(189, 189, 189);
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    margin-top: -150px;
+    margin-left: -130px;
+}
+.center-board {
+    position: fixed;
+    top: 20%;
+    left:30%;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-start {
+    position: fixed;
+    top: 90%;
+    left:50%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-a8 {
+    position: fixed;
+    top: 21%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.a8Button{
+    position: fixed;
+    display: block;
+    top: 21%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.a8Xmark{
+    position: fixed;
+    top: 21%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-a7 {
+    position: fixed;
+    display: none;
+    top: 28.2%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-a6 {
+    position: fixed;
+    top: 35.4%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.a6Button{
+    position: fixed;
+    top: 35.4%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.a6Xmark{
+    position: fixed;
+    top: 35.4%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-a5 {
+    position: fixed;
+    display: none;
+    top: 42.6%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-a4 {
+    position: fixed;
+    top: 49.8%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.a4Button{
+    position: fixed;
+    top: 49.8%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.a4Xmark{
+    position: fixed;
+    top: 49.8%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-a3 {
+    position: fixed;
+    display: none;
+    top: 57%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-a2 {
+    position: fixed;
+    display: none;
+    top: 64.2%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-a1 {
+    position: fixed;
+    display: none;
+    top: 71.5%;
+    left:35%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-b8 {
+    position: fixed;
+    display: none;
+    top: 21%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-b7 {
+    position: fixed;
+    display: none;
+    top: 28.2%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-b6 {
+    position: fixed;
+    top: 35.4%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.b6Button{
+    position: fixed;
+    top: 35.4%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.b6Xmark{
+    position: fixed;
+    top: 35.4%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-b5 {
+    position: fixed;
+    display: none;
+    top: 42.6%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-b4 {
+    position: fixed;
+    display: none;
+    top: 49.8%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-b3 {
+    position: fixed;
+    display: none;
+    top: 57%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-b2 {
+    position: fixed;
+    top: 64.2%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.b2Button{
+    position: fixed;
+    top: 64.2%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.b2Xmark{
+    position: fixed;
+    top: 64.2%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-b1 {
+    position: fixed;
+    display: none;
+    top: 71.5%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-c8 {
+    position: fixed;
+    display: none;
+    top: 21%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-c7 {
+    position: fixed;
+    top: 28.2%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.c7Button{
+    position: fixed;
+    top: 28.2%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.c7Xmark{
+    position: fixed;
+    top: 28.2%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-c6 {
+    position: fixed;
+    display: none;
+    top: 35.4%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-c5 {
+    position: fixed;
+    display: none;
+    top: 42.6%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-c4 {
+    position: fixed;
+    display: none;
+    top: 49.8%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.c4Button {
+    position: fixed;
+    top: 49.8%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-c3 {
+    position: fixed;
+    display: none;
+    top: 57%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-c2 {
+    position: fixed;
+    display: none;
+    top: 64.2%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-c1 {
+    position: fixed;
+    display: none;
+    top: 71.5%;
+    left:44.2%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+
+.knight-block-d8 {
+    position: fixed;
+    display: none;
+    top: 21%;
+    left:48.8%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-d7 {
+    position: fixed;
+    display: none;
+    top: 28.2%;
+    left:48.8%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-d6 {
+    position: fixed;
+    display: none;
+    top: 35.4%;
+    left:48.8%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-d5 {
+    position: fixed;
+    display: none;
+    top: 42.6%;
+    left:48.8%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-d4 {
+    position: fixed;
+    display: none;
+    top: 49.8%;
+    left:48.8%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-d3 {
+    position: fixed;
+    display: none;
+    top: 57%;
+    left:48.8%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-d2 {
+    position: fixed;
+    display: none;
+    top: 64.2%;
+    left:48.8%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-d1 {
+    position: fixed;
+    top: 71.5%;
+    left:48.8%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.d1Button {
+    position: fixed;
+    top: 71.5%;
+    left:48.8%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.d1Xmark{
+    position: fixed;
+    top: 71.5%;
+    left:48.8%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-e8 {
+    position: fixed;
+    top: 21%;
+    left:53.25%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.e8Button{
+    position: fixed;
+    top: 21%;
+    left:53.25%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.e8Xmark{
+    position: fixed;
+    top: 21%;
+    left:53.25%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-e7 {
+    position: fixed;
+    display: none;
+    top: 28.2%;
+    left:53.25%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-e6 {
+    position: fixed;
+    display: none;
+    top: 35.4%;
+    left:53.25%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-e5 {
+    position: fixed;
+    display: none;
+    top: 42.6%;
+    left:53.25%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-e4 {
+    position: fixed;
+    display: none;
+    top: 49.8%;
+    left:53.25%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-e3 {
+    position: fixed;
+    display: none;
+    top: 57%;
+    left:53.25%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-e2 {
+    position: fixed;
+    display: none;
+    top: 64.2%;
+    left:53.25%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-e1 {
+    position: fixed;
+    display: none;
+    top: 71.5%;
+    left:53.25%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f8 {
+    position: fixed;
+    display: none;
+    top: 21%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f7 {
+    position: fixed;
+    display: none;
+    top: 28.2%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f6 {
+    position: fixed;
+    display: none;
+    top: 35.4%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f5 {
+    position: fixed;
+    display: none;
+    top: 42.6%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f4 {
+    position: fixed;
+    display: none;
+    top: 49.8%;
+    left:39.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-g2 {
+    position: fixed;
+    display: none;
+    top: 64.2%;
+    left:53.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-g1 {
+    position: fixed;
+    display: none;
+    top: 71.5%;
+    left:53.75%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f8 {
+    position: fixed;
+    display: none;
+    top: 21%;
+    left:57.78%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f7 {
+    position: fixed;
+    display: none;
+    top: 28.2%;
+    left:57.78%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f6 {
+    position: fixed;
+    display: none;
+    top: 35.4%;
+    left:57.78%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f5 {
+    position: fixed;
+    display: none;
+    top: 42.6%;
+    left:57.78%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f4 {
+    position: fixed;
+    display: none;
+    top: 49.8%;
+    left:57.78%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f3 {
+    position: fixed;
+    display: none;
+    top: 57%;
+    left:57.78%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f2 {
+    position: fixed;
+    top: 64.2%;
+    left:57.78%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.f2Button{
+    position: fixed;
+    top: 64.2%;
+    left:57.78%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.f2Xmark{
+    position: fixed;
+    top: 64.2%;
+    left:57.78%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-f1 {
+    position: fixed;
+    display: none;
+    top: 71.5%;
+    left:57.78%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+
+.knight-block-g8 {
+    position: fixed;
+    display: none;
+    top: 21%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-g7 {
+    position: fixed;
+    top: 28.2%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.g7Button{
+    position: fixed;
+    top: 28.2%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.g7Xmark{
+    position: fixed;
+    top: 28.2%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-g6 {
+    position: fixed;
+    display: none;
+    top: 35.4%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-g5 {
+    position: fixed;
+    display: none;
+    top: 42.6%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-g4 {
+    position: fixed;
+    display: none;
+    top: 49.8%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-g3 {
+    position: fixed;
+    top: 57%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.g3Button{
+    position: fixed;
+    top: 57%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.g3Xmark{
+    position: fixed;
+    top: 57%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-g2 {
+    position: fixed;
+    display: none;
+    top: 64.2%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-g1 {
+    position: fixed;
+    display: none;
+    top: 71.5%;
+    left:62.3%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-h8 {
+    position: fixed;
+    display: none;
+    top: 21%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-h7 {
+    position: fixed;
+    display: none;
+    top: 28.2%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-h6 {
+    position: fixed;
+    display: none;
+    top: 35.4%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-h5 {
+    position: fixed;
+    top: 42.6%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.h5Button{
+    position: fixed;
+    top: 42.6%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.h5Xmark{
+    position: fixed;
+    top: 42.6%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-h4 {
+    position: fixed;
+    display: none;
+    top: 49.8%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-h3 {
+    position: fixed;
+    display: none;
+    top: 57%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-h2 {
+    position: fixed;
+    display: none;
+    top: 64.2%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.knight-block-h1 {
+    position: fixed;
+    top: 71.5%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.h1Button{
+    position: fixed;
+    top: 71.5%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.h1Xmark{
+    position: fixed;
+    top: 71.5%;
+    left:66.85%;
+    cursor: pointer;
+    margin-left: -50px;
+    margin-top: -100px;
+}

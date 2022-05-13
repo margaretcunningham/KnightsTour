@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<head>
+    <title> The Knight's Tour</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<html>
+<body>
+
+
+    <div class="center-board"> 
+        <a id="board">
+            <img style = "width: 600px;" src = "empty-numbered-chess-set.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-start">
+        <a id="start">
+            <img style = "width: 60px;" src="piece3.png"></img>
+        </a>
+    </div>
+
+    <div class="knight-block-a8"> 
+        <a id="a8">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="a8Button" class = "a8Button">
+        <a id="a8Btn">
+            <img style = "width: 60px;" src = "start.png"></img> 
+        </a>  
+    </div>
+
+    <div id="a8X" class = "a8Xmark">
+        <a id="a8X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-a7"> 
+        <a id="a7">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-a6"> 
+        <a id="a6">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    
+    <div id="a6Button" class = "a6Button">
+        <a id="a6Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="a6X" class = "a6Xmark">
+        <a id="a6X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+
+    <div class="knight-block-a5"> 
+        <a id="a5">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-a4"> 
+        <a id="a4">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="a4Button" class = "a4Button">
+        <a id="a4Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="a4X" class = "a4Xmark">
+        <a id="a4X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-a3"> 
+        <a id="a3">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-a2"> 
+        <a id="a2">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-a1"> 
+        <a id="a1">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-b8"> 
+        <a id="b8">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-b7"> 
+        <a id="b7">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-b6"> 
+        <a id="b6">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="b6Button" class = "b6Button">
+        <a id="b6Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="b6X" class = "b6Xmark">
+        <a id="b6X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-b5"> 
+        <a id="b5">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-b4"> 
+        <a id="b4">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-b3"> 
+        <a id="b3">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-b2"> 
+        <a id="b2">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="b2Button" class = "b2Button">
+        <a id="b2Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="b2X" class = "b2Xmark">
+        <a id="b2X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-b1"> 
+        <a id="b1">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-c8"> 
+        <a id="c8">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-c7"> 
+        <a id="c7">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="c7Button" class = "c7Button">
+        <a id="c7Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="c7X" class = "c7Xmark">
+        <a id="c7X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-c6"> 
+        <a id="c6">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-c5"> 
+        <a id="c5">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-c4"> 
+        <a id="c4">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div id="c4Button" class = "c4Button">
+        <a id="c4Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-c3"> 
+        <a id="c3">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-c2"> 
+        <a id="c2">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-c1"> 
+        <a id="c1">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-d8"> 
+        <a id="d8">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-d7"> 
+        <a id="d7">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-d6"> 
+        <a id="d6">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-d5"> 
+        <a id="d5">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-d4"> 
+        <a id="d4">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-d3"> 
+        <a id="d3">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-d2"> 
+        <a id="d2">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-d1"> 
+        <a id="d1">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="d1Button" class = "d1Button">
+        <a id="d1Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="d1X" class = "d1Xmark">
+        <a id="d1X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-e8"> 
+        <a id="e8">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="e8Button" class = "e8Button">
+        <a id="e8Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="e8X" class = "e8Xmark">
+        <a id="e8X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-e7"> 
+        <a id="e7">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-e6"> 
+        <a id="e6">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-e5"> 
+        <a id="e5">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-e4"> 
+        <a id="e4">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-e3"> 
+        <a id="e3">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-e2"> 
+        <a id="e2">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-e1"> 
+        <a id="e1">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-f8"> 
+        <a id="f8">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-f7"> 
+        <a id="f7">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-f6"> 
+        <a id="f6">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-f5"> 
+        <a id="f5">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-f4"> 
+        <a id="f4">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-f3"> 
+        <a id="f3">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-f2"> 
+        <a id="f2">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="f2Button" class = "f2Button">
+        <a id="f2Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="f2X" class = "f2Xmark">
+        <a id="f2X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-f1"> 
+        <a id="f1">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-g8"> 
+        <a id="g8">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-g6"> 
+        <a id="g6">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-g5"> 
+        <a id="g5">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-g4"> 
+        <a id="g4">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-g2"> 
+        <a id="g2">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-g1"> 
+        <a id="g1">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-g8"> 
+        <a id="g8">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-g7"> 
+        <a id="g7">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="g7Button" class = "g7Button">
+        <a id="g7Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="g7X" class = "g7Xmark">
+        <a id="g7X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-g6"> 
+        <a id="g6">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-g5"> 
+        <a id="g5">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-g4"> 
+        <a id="g4">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-g3"> 
+        <a id="g3">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="g3Button" class = "g3Button">
+        <a id="g3Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="g3X" class = "g3Xmark">
+        <a id="g3X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-h8"> 
+        <a id="h8">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-h7"> 
+        <a id="h7">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+    <div class="knight-block-h6"> 
+        <a id="h6">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-h5"> 
+        <a id="h5">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="h5Button" class = "h5Button">
+        <a id="h5Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="h5X" class = "h5Xmark">
+        <a id="h5X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-h4"> 
+        <a id="h4">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-h3"> 
+        <a id="h3">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-h2"> 
+        <a id="h2">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div class="knight-block-h1"> 
+        <a id="h1">
+            <img style = "width: 60px;" src = "piece3.png"></img> 
+        </a>  
+    </div>
+
+    <div id="h1Button" class = "h1Button">
+        <a id="h1Btn">
+            <img style = "width: 60px;" src = "green.png"></img> 
+        </a>  
+    </div>
+
+    <div id="h1X" class = "h1Xmark">
+        <a id="h1X">
+            <img style = "width: 60px;" src = "red.png"></img> 
+        </a>  
+    </div>
+
+    <script>
+        var square = 1;
+        var a8X = document.getElementById("a8X");
+        var b6X = document.getElementById("b6X");
+        var a4X = document.getElementById("a4X");
+        var b2X = document.getElementById("b2X");
+        var d1X = document.getElementById("d1X");
+        var f2X = document.getElementById("f2X");
+        var h1X = document.getElementById("h1X");
+        var g3X = document.getElementById("g3X");
+        var h5X = document.getElementById("h5X");
+        var g7X = document.getElementById("g7X");
+        var e8X = document.getElementById("e8X");
+        var c7X = document.getElementById("c7X");
+        var a6X = document.getElementById("a6X");
+        var startButton = document.getElementById("a8Btn");
+        var b6Button = document.getElementById("b6Btn");
+        var c7Button = document.getElementById("c7Btn");
+        var a4Button = document.getElementById("a4Btn");
+        var b2Button = document.getElementById("b2Btn");
+        var c4Button = document.getElementById("c4Btn");
+        var d1Button = document.getElementById("d1Btn");
+        var f2Button = document.getElementById("f2Btn");
+        var h1Button = document.getElementById("h1Btn");
+        var g3Button = document.getElementById("g3Btn");
+        var h5Button = document.getElementById("h5Btn");
+        var g7Button = document.getElementById("g7Btn");
+        var e8Button = document.getElementById("e8Btn");
+        var a6Button = document.getElementById("a6Btn");
+        var start = document.getElementById("knight-start");
+        var Na8 = document.getElementById("a8");
+        var Na7 = document.getElementById("a7");
+        var Na6 = document.getElementById("a6");
+        var Na5 = document.getElementById("a5");
+        var Na4 = document.getElementById("a4");
+        var Na3 = document.getElementById("a3");
+        var Na2 = document.getElementById("a2");
+        var Na1 = document.getElementById("a1");
+        var Nb8 = document.getElementById("b8");
+        var Nb7 = document.getElementById("b7");
+        var Nb6 = document.getElementById("b6");
+        var Nb5 = document.getElementById("b5");
+        var Nb4 = document.getElementById("b4");
+        var Nb3 = document.getElementById("b3");
+        var Nb2 = document.getElementById("b2");
+        var Nb1 = document.getElementById("b1");
+        var Nc8 = document.getElementById("c8");
+        var Nc7 = document.getElementById("c7");
+        var Nc6 = document.getElementById("c6");
+        var Nc5 = document.getElementById("c5");
+        var Nc4 = document.getElementById("c4");
+        var Nc3 = document.getElementById("c3");
+        var Nc2 = document.getElementById("c2");
+        var Nc1 = document.getElementById("c1");
+        var Nd8 = document.getElementById("d8");
+        var Nd7 = document.getElementById("d7");
+        var Nd6 = document.getElementById("d6");
+        var Nd5 = document.getElementById("d5");
+        var Nd4 = document.getElementById("d4");
+        var Nd3 = document.getElementById("d3");
+        var Nd2 = document.getElementById("d2");
+        var Nd1 = document.getElementById("d1");
+        var Ne8 = document.getElementById("e8");
+        var Ne7 = document.getElementById("e7");
+        var Ne6 = document.getElementById("e6");
+        var Ne5 = document.getElementById("e5");
+        var Ne4 = document.getElementById("e4");
+        var Ne3 = document.getElementById("e3");
+        var Ne2 = document.getElementById("e2");
+        var Ne1 = document.getElementById("e1");
+        var Nf8 = document.getElementById("f8");
+        var Nf7 = document.getElementById("f7");
+        var Nf6 = document.getElementById("f6");
+        var Nf5 = document.getElementById("f5");
+        var Nf4 = document.getElementById("f4");
+        var Nf3 = document.getElementById("f3");
+        var Nf2 = document.getElementById("f2");
+        var Nf1 = document.getElementById("f1");
+        var Ng8 = document.getElementById("g8");
+        var Ng7 = document.getElementById("g7");
+        var Ng6 = document.getElementById("g6");
+        var Ng5 = document.getElementById("g5");
+        var Ng4 = document.getElementById("g4");
+        var Ng3 = document.getElementById("g3");
+        var Ng2 = document.getElementById("g2");
+        var Ng1 = document.getElementById("g1");
+        var Nh8 = document.getElementById("h8");
+        var Nh7 = document.getElementById("h7");
+        var Nh6 = document.getElementById("h6");
+        var Nh5 = document.getElementById("h5");
+        var Nh4 = document.getElementById("h4");
+        var Nh3 = document.getElementById("h3");
+        var Nh2 = document.getElementById("h2");
+        var Nh1 = document.getElementById("h1");
+
+        Na8.style.display = "none";
+        Na4.style.display = "none";
+        Nb6.style.display = "none";
+        Nb2.style.display = "none";
+        Nd1.style.display = "none";
+        Nf2.style.display = "none";
+        Nh1.style.display = "none";
+        Ng3.style.display = "none";
+        Nh5.style.display = "none";
+        Ng7.style.display = "none";
+        Ne8.style.display = "none";
+        Nc7.style.display = "none";
+        Na6.style.display = "none";
+
+        b6Button.style.display = "none";
+        c7Button.style.display = "none";
+        a4Button.style.display = "none";
+        b2Button.style.display = "none";
+        c4Button.style.display = "none";
+        d1Button.style.display = "none";
+        f2Button.style.display = "none";
+        h1Button.style.display = "none";
+        g3Button.style.display = "none";
+        h5Button.style.display = "none";
+        g7Button.style.display = "none";
+        e8Button.style.display = "none";
+        a6Button.style.display = "none";
+
+        a8X.style.display = "none";
+        b6X.style.display = "none";
+        a4X.style.display = "none";
+        b2X.style.display = "none";
+        d1X.style.display = "none";
+        f2X.style.display = "none";
+        h1X.style.display = "none";
+        g3X.style.display = "none";
+        h5X.style.display = "none";
+        g7X.style.display = "none";
+        e8X.style.display = "none";
+        c7X.style.display = "none";
+        a6X.style.display = "none";
+
+        function squareChange(){
+            switch (square){
+                case 1: 
+                    enSquare1();
+                    break;
+
+                case 2:
+                    enSquare2();
+                    break;
+
+                case 3:
+                    enSquare3();
+                    break;
+
+                case 4:
+                    enSquare4();
+                    break;
+
+                case 5:
+                    enSquare5();
+                    break;
+
+                case 6:
+                    enSquare6();
+                    break;
+                    
+                case 7:
+                    enSquare7();
+                    break;
+
+                case 8:
+                    enSquare8();
+                    break;
+
+                case 9:
+                    enSquare9();
+                    break;
+
+                case 10:
+                    enSquare10();
+                    break;
+
+                case 11:
+                    enSquare11();
+                    break;
+                
+                case 12:
+                    enSquare12();
+                    break;
+                
+                case 13:
+                    enSquare13();
+                    break;
+            }
+        }
+
+        function enSquare1(){ // knight to a8
+            Na8.style.display = "block";
+            b6Button.style.display = "block";
+            c7Button.style.display = "block";
+            startButton.style.display = "none";
+        }
+        function enSquare2(){ // knight to b6
+            Na8.style.display = "none";
+            b6Button.style.display = "none";
+            c7Button.style.display = "none";
+            Nb6.style.display = "block";
+            a8X.style.display = "block";
+            a4Button.style.display = "block";
+            c4Button.style.display = "block";
+        }
+        function enSquare3(){ // knight to a4
+            Nb6.style.display = "none";
+            b6X.style.display = "block";
+            a4Button.style.display = "none";
+            Na4.style.display = "block";
+            b2Button.style.display = "block";
+            c4Button.style.display = "none";
+        }
+        function enSquare4(){ // knight to b2
+            Na4.style.display = "none";
+            Nb2.style.display = "block";
+            b2Button.style.display = "none";
+            d1Button.style.display = "block";
+            a4X.style.display = "block";
+        }
+        function enSquare5(){ // knight to d1
+            Nb2.style.display = "none";
+            Nd1.style.display = "block";
+            d1Button.style.display = "none";
+            b2X.style.display = "block";
+            f2Button.style.display = "block";
+        }
+        function enSquare6(){ // knight to f2
+            Nd1.style.display = "none";
+            Nf2.style.display = "block";
+            f2Button.style.display = "none";
+            d1X.style.display = "block";
+            h1Button.style.display = "block";
+        }
+        function enSquare7(){ // knight to h1
+            h1Button.style.display = "none";
+            g3Button.style.display = "block";
+            Nf2.style.display = "none";
+            Nh1.style.display = "block";
+            f2X.style.display = "block";
+        }
+        function enSquare8(){ // knight to g3
+            g3Button.style.display = "none";
+            h5Button.style.display = "block";
+            Nh1.style.display = "none";
+            Ng3.style.display = "block";
+            h1X.style.display = "block";
+        }
+        function enSquare9(){ // knight to h5
+            Ng3.style.display = "none";
+            g3X.style.display = "block";
+            h5Button.style.display = "none";
+            Nh5.style.display = "block";
+            g7Button.style.display = "block";
+        }
+        function enSquare10(){ // knight to g7
+            Nh5.style.display = "none";
+            g7Button.style.display = "none";
+            Ng7.style.display = "block";
+            h5X.style.display = "block";
+            e8Button.style.display = "block";
+        }
+        function enSquare11(){ // knight to e8
+            Ng7.style.display = "none";
+            e8Button.style.display = "none";
+            Ne8.style.display = "block";
+            g7X.style.display = "block";
+            c7Button.style.display = "block";
+        }
+        function enSquare12(){ // knight to e8
+            Ne8.style.display = "none";
+            c7Button.style.display = "none";
+            e8X.style.display = "block";
+            Nc7.style.display = "block";
+            a6Button.style.display = "block";
+        }
+        function enSquare13(){ // knight to e8
+            Nc7.style.display = "none";
+            Na6.style.display = "block";
+            c7X.style.display = "block";
+            a6Button.style.display = "none";
+        }
+
+        startButton.onclick = function() {
+            square = 1;
+            squareChange();
+        }
+        b6Button.onclick = function() {
+            square++; // change to 2
+            squareChange();
+        }
+        a4Button.onclick = function() {
+            square++; // change to 3
+            squareChange();
+        }
+        b2Button.onclick = function() {
+            square++; // change to 4
+            squareChange();
+        }
+        d1Button.onclick = function() {
+            square++; // change to 5
+            squareChange();
+        }
+        f2Button.onclick = function() {
+            square++; // change to 6
+            squareChange();
+        }
+        h1Button.onclick = function() {
+            square++; // change to 7
+            squareChange();
+        }
+        g3Button.onclick = function() {
+            square++; // change to 8
+            squareChange();
+        }
+        h5Button.onclick = function() {
+            square++; // change to 9
+            squareChange();
+        }
+        g7Button.onclick = function() {
+            square++; // change to 10
+            squareChange();
+        }
+        e8Button.onclick = function() {
+            square++; // change to 11
+            squareChange();
+        }
+        c7Button.onclick = function() {
+            square++; // change to 12
+            squareChange();
+        }
+        a6Button.onclick = function() {
+            square++; // change to 13
+            squareChange();
+        }
+
+    </script>
+
+</body>
